@@ -1,20 +1,62 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { Text, View, Image, StyleSheet } from 'react-native';
+
+import Img from './assets/images/lua.png';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={ estilos.container }>
+      <Image style={ estilos.img } source={ Img } />
+
+      <View style={ estilos.boxTexto }>
+        <Text style={ estilos.titulo }>Lua</Text>
+        <Text style={ estilos.texto }>A Lua é o satélite natural do <Text style={ estilos.destaque }>planeta Terra</Text>, distanciados por aproximadamente 384.405 km.</Text>
+      </View>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
+const estilos = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#000',
+    padding: 30,
   },
+
+  img: {
+    width: 200,
+    height: 200,
+    marginBottom: 50,
+  },
+
+  boxTexto: {
+    borderColor: "#fff",
+    borderWidth: 2,
+    borderRadius: 20,
+    borderStyle: 'dotted',
+    width: 300,
+    paddingVertical: 10,
+    paddingHorizontal: 25,
+  },
+
+  titulo: {
+    color: '#fff',
+    fontSize: 26,
+    fontWeight: 'bold',
+    marginBottom: 20,
+    textAlign: 'center',
+  },
+
+  texto: {
+    color: '#fff',
+    fontWeight: "normal",
+    textAlign: 'center',
+  },
+
+  destaque: {
+    fontStyle: 'italic',
+    fontWeight: 'bold',
+  }
 });
