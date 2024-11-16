@@ -51,8 +51,8 @@ const estilos = StyleSheet.create({
 
   texto: {
     color: '#fff',
-    fontWeight: "normal",
     textAlign: 'center',
+    fontWeight: "normal",
   },
 
   destaque: {
